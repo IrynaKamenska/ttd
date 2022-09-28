@@ -33,7 +33,7 @@ class MainTest {
 
 
     @Test
-    public void divisibleTo3(){
+    public void divisibleBy3(){
         // given
         int number = 9;
 
@@ -42,6 +42,19 @@ class MainTest {
 
         // then
         String expected = "fizz";
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void divisibleBy5(){
+        // given
+        int number = 5;
+
+        // when
+        String actual = Main.fizzBuzz(number);
+
+        // then
+        String expected = "buzz";
         assertEquals(expected, actual);
     }
 
