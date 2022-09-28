@@ -2,12 +2,12 @@ package org.example;
 
 public class Main {
     public static String fizzBuzz(int number) {
-        if(isDivisibleBy3(number) && isDivisibleBy5(number)){
+        if(isFizz(number) && isBuzz(number)){
             return "fizzbuzz";
         }
-        else if(isDivisibleBy3(number)){
+        else if(isFizz(number)){
             return "fizz";
-        } else if (isDivisibleBy5(number)) {
+        } else if (isBuzz(number)) {
             return "buzz";
         }
         return String.valueOf(number);
@@ -15,11 +15,11 @@ public class Main {
 
 
 
-    public static boolean isDivisibleBy3(int number){
-        return (number % 3 == 0);
+    public static boolean isFizz(int number){
+        return number % 3 == 0;
     }
 
-    public static boolean isDivisibleBy5(int number){
-        return (number % 5 == 0);
+    public static boolean isBuzz(int number){
+        return number % 5 == 0;
     }
 }
