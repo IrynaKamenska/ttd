@@ -58,4 +58,18 @@ class MainTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void divisibleBy5And3(){
+        // given
+        int number = 150;
+
+        // when
+        String actual = Main.fizzBuzz(number);
+
+        // then
+        String expected = "fizzbuzz";
+        assertEquals(expected, actual);
+    }
+
+
 }
