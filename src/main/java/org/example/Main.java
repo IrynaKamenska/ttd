@@ -2,24 +2,19 @@ package org.example;
 
 public class Main {
     public static String fizzBuzz(int number) {
-        if(isFizz(number) && isBuzz(number)){
+        if(isDivisible(number, 15)){
             return "fizzbuzz";
         }
-        else if(isFizz(number)){
+        else if(isDivisible(number, 3)){
             return "fizz";
-        } else if (isBuzz(number)) {
+        } else if (isDivisible(number, 5)) {
             return "buzz";
         }
         return String.valueOf(number);
     }
 
 
-
-    public static boolean isFizz(int number){
-        return number % 3 == 0;
-    }
-
-    public static boolean isBuzz(int number){
-        return number % 5 == 0;
+    public static boolean isDivisible(int number, int divisor){
+        return number % divisor == 0;
     }
 }
